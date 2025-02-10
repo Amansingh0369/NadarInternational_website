@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-// import { Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import React from "react";
 
-// const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Nadar International - Premium Indian Exports',
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-          // className={inter.className}
+          className={inter.className}
       >
         <div className="min-h-screen flex flex-col">
           <Navbar />
