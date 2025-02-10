@@ -1,4 +1,6 @@
 import Fruits from "../../public/fruits.jpg"
+import vege from "../../public/vege.avif"
+import spices from "../../public/spices.jpeg"
 export default function FeaturedProducts() {
   const products = {
     fruits: {
@@ -9,12 +11,12 @@ export default function FeaturedProducts() {
     vegetables: {
       name: 'Fresh Vegetables', 
       description: 'Farm-fresh vegetables harvested at peak ripeness for maximum nutrition and flavor.',
-      image: 'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&q=80'
+      image: vege.src
     },
     spices: {
       name: 'Authentic Spices',
       description: 'Traditional Indian spices including turmeric, chilies, and more - ground fresh to preserve aroma.',
-      image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80'
+      image:spices.src
     }
   };
 
