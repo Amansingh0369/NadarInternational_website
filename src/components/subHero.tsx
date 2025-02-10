@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import heroImage from '../../public/aerial-view-container-cargo-ship-sea.jpg';
+import heroImage from '../../public/aerial-view-container-cargo-ship-sea-min.jpg';
 import heroImage2 from '../../public/02.png';
 import heroImage3 from '../../public/s02_bip_74copy.png';
 import { Ubuntu, Playfair_Display } from 'next/font/google';

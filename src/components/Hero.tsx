@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import heroImage from '../../public/assortment-spices-herbs-bowls.jpg';
+import heroImage from '../../public/assortment-spices-herbs-bowls-min.jpg';
 import { Ubuntu, Playfair_Display } from 'next/font/google';
 
 const ubuntu = Ubuntu({
