@@ -17,6 +17,8 @@ import cauliflower from "../../public/fresh-organic-cauliflower-sale-traditional
 import cucumber from "../../public/fresh-cucumbers-sliced-dark-background (1)-min.jpg"
 import greenPeppers from "../../public/top-view-green-peppers-surface-min.jpg"
 import kale from "../../public/fresh-kale-leaf-healthy-vegetarian-salad-ingredient-generated-by-ai-min.jpg"
+import tomato from "../../public/top-view-ripe-fresh-tomatoes-with-water-drops-black-background.jpg"
+
 
 export const fruitsList = [
   {
@@ -74,6 +76,11 @@ export const vegetablesList = [
     name: 'Potato',
     description: 'Versatile and delicious, perfect for any meal, from fries to curries and beyond.',
     image: potatoes.src
+  },
+  {
+    name: 'Tomato',
+    description: 'Juicy and flavorful, perfect for salads, sauces, and more.',
+    image: tomato.src
   },
   {
     name: 'Peas',
