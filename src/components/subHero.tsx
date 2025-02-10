@@ -1,9 +1,10 @@
-import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import heroImage from '../../public/aerial-view-container-cargo-ship-sea.jpg';
 import heroImage2 from '../../public/02.png';
 import heroImage3 from '../../public/s02_bip_74copy.png';
 import { Ubuntu, Playfair_Display } from 'next/font/google';
+import WhyChooseUs from "@/components/WhyChooseUs";
+import React from "react";
 
 const ubuntu = Ubuntu({
   weight: ['400', '700'],
@@ -19,6 +20,9 @@ export default function SubHero() {
   return (
     <>
       <section className="relative h-[40rem] p-10 sm:p-0 sm:h-[45rem] md:h-[40rem] rounded-full ">
+          <div>
+             <h1></h1>
+          </div>
         <div className="absolute inset-0 rounded-[2rem] py-10 p-2 sm:p-10 overflow-hidden">
           <Image 
             src={heroImage} 

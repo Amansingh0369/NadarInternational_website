@@ -20,6 +20,10 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-16 w-full bg-gradient-to-br from-blue-800/80 to-blue-950">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Choose Us</h1>
+        <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
