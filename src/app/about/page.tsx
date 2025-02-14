@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import thank from "../../../public/thank.jpeg"
 
 export default function About() {
   return (
@@ -34,7 +35,7 @@ export default function About() {
               processes ensure that every product meets and exceeds international standards.
             </p>
             <p className="text-gray-700 text-lg sm:text-xl leading-relaxed">
-              With decades of expertise in global trade, we've built strong partnerships with farmers and international clients, 
+              With expertise in global trade, we've built strong partnerships with farmers and international clients,
               ensuring a seamless supply chain that delivers freshness and quality to markets worldwide. Our commitment to 
               sustainable farming practices, farmer welfare, and environmental responsibility sets us apart in the industry.
             </p>
@@ -86,6 +87,19 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <div className="flex justify-center items-center mx-auto  px-10 sm:px-0 py-12 md:py-24 w-full h-full">
+        <div className="flex justify-center">
+          <img
+              src="/thank.jpeg"
+              alt="Premium Produce Export"
+              className="rounded-3xl shadow-2xl w-full sm:w-[50rem] object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      </div>
+
+
+
     </div>
   );
 }

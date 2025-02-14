@@ -9,7 +9,7 @@ export default function FeaturedProducts() {
     vegetables: {
       name: 'Fresh Vegetables', 
       description: 'Farm-fresh vegetables harvested at peak ripeness for maximum nutrition and flavor.',
-      image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&q=80",
+      image: "https://img.freepik.com/free-photo/healthy-vegetables-wooden-table_1150-38014.jpg?semt=ais_hybrid",
     },
     spices: {
       name: 'Authentic Spices',
@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
   return (
     <div className="min-h-screen pb-16 pt-10 bg-neutral-200">
       <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col h-full">
-        <h1 className="text-6xl font-bold text-blue-950 text-center mb-12">Who We Are<span className="font-bold text-orange-500"> ?</span></h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-blue-950 text-center mb-12">Who We Are<span className="font-bold text-orange-500"> ?</span></h1>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
           {/* Company Description - Takes full width on mobile, half width on desktop */}
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:col-span-2">

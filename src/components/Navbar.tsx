@@ -22,15 +22,16 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link 
               href="/" 
-              className="flex items-center text-3xl font-bold text-orange-500 hover:scale-105 transition-transform duration-300"
+              className="flex items-center text-3xl font-light text-orange-500 hover:scale-105 transition-transform duration-300"
             >
-              <Image 
-                src={logo} 
-                alt="Nadar International" 
-                width={120} 
-                height={120}
-                className="[filter:brightness(0)_sepia(1)_hue-rotate(220deg)_saturate(6)_contrast(0.8)]" 
+              <Image
+                  src={logo}
+                  alt="Nadar International"
+                  width={120}
+                  height={120}
+                  className="[filter:brightness(0)_sepia(1)_hue-rotate(35deg)_saturate(5)_contrast(1.2)]"
               />
+
             </Link>
           </div>
 
@@ -50,7 +51,7 @@ export default function Navbar() {
               href="/" 
               className={`${
                 pathname === '/' ? 'text-orange-500 border-b-2 border-orange-500' : 'text-gray-700'
-              } hover:text-orange-500 py-2 transition-all duration-300 ease-in-out hover:-translate-y-0.5 font-bold text-xl`}
+              } hover:text-orange-500 py-2 transition-all duration-300 ease-in-out hover:-translate-y-0.5 font-light text-xl`}
             >
               Home
             </Link>
@@ -79,6 +80,14 @@ export default function Navbar() {
             >
               Vegetables
             </Link>
+            <Link
+                href="/certification"
+                className={`${
+                    pathname === '/certification' ? 'text-orange-500 border-b-2 border-orange-500' : 'text-gray-700'
+                } hover:text-orange-500 py-2 transition-all duration-300 ease-in-out hover:-translate-y-0.5  text-xl`}
+            >
+              Certification
+            </Link>
             <Link 
               href="/about" 
               className={`${
@@ -99,7 +108,7 @@ export default function Navbar() {
               href="/"
               className={`${
                 pathname === '/' ? 'text-orange-500 bg-orange-50/30 backdrop-blur-sm' : 'text-gray-700'
-              } block px-3 py-2 rounded-md text-lg font-bold hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
+              } block px-3 py-2 rounded-md text-lg font-light hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
               onClick={toggleMenu}
             >
               Home
@@ -108,7 +117,7 @@ export default function Navbar() {
               href="/spices"
               className={`${
                 pathname === '/spices' ? 'text-orange-500 bg-orange-50/30 backdrop-blur-sm' : 'text-gray-700'
-              } block px-3 py-2 rounded-md text-lg font-bold hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
+              } block px-3 py-2 rounded-md text-lg font-light hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
               onClick={toggleMenu}
             >
               Spices
@@ -117,7 +126,7 @@ export default function Navbar() {
               href="/fruits"
               className={`${
                 pathname === '/fruits' ? 'text-orange-500 bg-orange-50/30 backdrop-blur-sm' : 'text-gray-700'
-              } block px-3 py-2 rounded-md text-lg font-bold hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
+              } block px-3 py-2 rounded-md text-lg font-light hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
               onClick={toggleMenu}
             >
               Fruits
@@ -126,17 +135,25 @@ export default function Navbar() {
               href="/vegetables"
               className={`${
                 pathname === '/vegetables' ? 'text-orange-500 bg-orange-50/30 backdrop-blur-sm' : 'text-gray-700'
-              } block px-3 py-2 rounded-md text-lg font-bold hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
+              } block px-3 py-2 rounded-md text-lg font-light hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
               onClick={toggleMenu}
             >
               Vegetables
             </Link>
-            
+            <Link
+                href="/certification"
+                className={`${
+                    pathname === '/certification' ? 'text-orange-500 bg-orange-50/30 backdrop-blur-sm' : 'text-gray-700'
+                } block px-3 py-2 rounded-md text-lg font-light hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
+                onClick={toggleMenu}
+            >
+              certification
+            </Link>
             <Link 
               href="/about"
               className={`${
                 pathname === '/about' ? 'text-orange-500 bg-orange-50/30 backdrop-blur-sm' : 'text-gray-700'
-              } block px-3 py-2 rounded-md text-lg font-bold hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
+              } block px-3 py-2 rounded-md text-lg font-light hover:text-orange-500 hover:bg-orange-50/30 hover:backdrop-blur-sm transition-colors duration-200`}
               onClick={toggleMenu}
             >
               About Us
