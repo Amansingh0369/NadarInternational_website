@@ -1,7 +1,32 @@
+'use client';
+
 import { Leaf, Sparkles, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
 
 export default function WhyChooseUs() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: isMobile ? 50 : 100,
+      startEvent: 'DOMContentLoaded',
+      disableMutationObserver: false,
+    });
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [isMobile]);
+
   const features = [
     {
       icon: <Leaf className="w-8 h-8" />,
@@ -23,8 +48,10 @@ export default function WhyChooseUs() {
   return (
     <section className="py-16 w-full bg-gradient-to-br from-blue-800/80 to-blue-950">
       <motion.div 
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Choose Us</h1>
@@ -41,9 +68,10 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 200}
-              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-xl text-white"
             >
               <motion.div 

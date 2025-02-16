@@ -6,7 +6,7 @@ export default function Vegetables() {
     <div className="bg-white">
       <div className="relative h-[400px]">
         <img 
-          src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&q=80" 
+          src="https://img.freepik.com/free-photo/healthy-vegetables-wooden-table_1150-38014.jpg?semt=ais_hybrid" 
           alt="Fresh vegetables" 
           className="w-full h-full object-cover"
         />

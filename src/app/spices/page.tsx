@@ -27,11 +27,11 @@ export default function Spices() {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1 }}
-          src="https://shorturl.at/IDYDU"
+          src="https://shorturl.at/iodlC"
           alt="Spices variety" 
           className="w-full h-full object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex flex-col items-center justify-center text-center px-4">
           <motion.h1 
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

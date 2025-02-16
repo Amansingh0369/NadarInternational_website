@@ -1,10 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import heroImage from '../../public/aerial-view-container-cargo-ship-sea-min.jpg';
 import heroImage2 from '../../public/02.png';
 import heroImage3 from '../../public/s02_bip_74copy.png';
 import { Ubuntu, Playfair_Display } from 'next/font/google';
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
+import AOS from 'aos';
 
 const ubuntu = Ubuntu({
   weight: ['400', '700'],
@@ -17,10 +20,30 @@ const playfair = Playfair_Display({
 });
 
 export default function SubHero() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: isMobile ? 50 : 100
+    });
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [isMobile]);
+
   return (
     <motion.section 
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8 }}
       className="relative h-[40rem] p-10 sm:p-0 sm:h-[45rem] md:h-[40rem] rounded-full"
     >
@@ -39,15 +62,20 @@ export default function SubHero() {
       <div className="relative max-w-7xl mx-auto px-4 h-full flex items-end py-10 sm:py-20">
         <motion.div 
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
           className="text-white w-full"
+          data-aos="fade-up"
+          data-aos-delay={isMobile ? "0" : "200"}
         >
           <div className="flex relative max-w-full overflow-hidden">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              data-aos="fade-right"
+              data-aos-delay={isMobile ? "100" : "300"}
             >
               <Image
                 src={heroImage2}
@@ -69,6 +97,8 @@ export default function SubHero() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
+            data-aos="fade-up"
+            data-aos-delay={isMobile ? "200" : "400"}
             className={`text-xs sm:text-4xl md:text-xl font-black mb-3 sm:mb-4 tracking-wide ${ubuntu.className}`}
           >
             At <span className="font-bold text-2xl sm:text-4xl text-orange-500">Nadar International</span>, we take pride in being a leading exporter of high-quality spices, pulses, grains, dried fruits, and other food products.With years of industry expertise, we have established ourselves as a reliable partner for businesses worldwide, ensuring the finest ingredients reach your doorstep.

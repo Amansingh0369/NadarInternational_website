@@ -32,11 +32,11 @@ export default function About() {
             src="/aerial-view-container-cargo-ship-sea-min.jpg"
             alt="Premium Produce Export"
             fill
-            className="rounded-3xl shadow-2xl object-cover object-center brightness-90"
+            className=" shadow-2xl object-cover object-center brightness-90"
             priority
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70 rounded-3xl flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70  flex flex-col items-center justify-center text-center px-4">
           <motion.h1 
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

@@ -68,10 +68,12 @@ export default function Navbar() {
       variants={navVariants}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        scrolled 
+          ? 'bg-blue-950 shadow-lg' 
+          : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl py-4 md:py-2 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <motion.div 
             whileHover={{ scale: isMobile ? 1.02 : 1.05 }}
@@ -83,9 +85,7 @@ export default function Navbar() {
                 alt="Nadar International"
                 width={120}
                 height={120}
-                className={`transition-all duration-300 ${
-                  scrolled ? '[filter:brightness(0)]' : '[filter:brightness(0)_invert(1)]'
-                }`}
+                className="[filter:brightness(0)_invert(1)]"
               />
             </Link>
           </motion.div>
@@ -103,8 +103,8 @@ export default function Navbar() {
                   className={`${
                     pathname === item.href 
                       ? 'text-orange-500' 
-                      : scrolled ? 'text-gray-800' : 'text-white'
-                  } hover:text-orange-500 text-sm font-medium transition-colors duration-200`}
+                      : 'text-white hover:text-orange-500'
+                  } text-sm font-medium transition-colors duration-200`}
                 >
                   {item.label}
                 </Link>
@@ -119,9 +119,9 @@ export default function Navbar() {
             className="md:hidden"
           >
             {isOpen ? (
-              <X className={`w-6 h-6 ${scrolled ? 'text-gray-800' : 'text-white'}`} />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className={`w-6 h-6 ${scrolled ? 'text-gray-800' : 'text-white'}`} />
+              <Menu className="w-6 h-6 text-white" />
             )}
           </motion.button>
         </div>
@@ -135,7 +135,7 @@ export default function Navbar() {
               exit="closed"
               variants={menuVariants}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed inset-0 top-16 bg-white/95 backdrop-blur-lg md:hidden"
+              className="fixed inset-0 top-24 bg-white md:hidden"
             >
               <div className="flex flex-col space-y-4 p-6">
                 {menuItems.map((item, index) => (
@@ -148,8 +148,10 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={`${
-                        pathname === item.href ? 'text-orange-500 bg-orange-50/50' : 'text-gray-700'
-                      } block px-3 py-2 rounded-md text-base font-medium hover:text-orange-500 hover:bg-orange-50/50 transition-all duration-200`}
+                        pathname === item.href 
+                          ? 'text-orange-500 bg-gray-100' 
+                          : 'text-gray-800'
+                      } block px-3 py-2 rounded-md font-medium hover:text-orange-500 hover:bg-gray-100 transition-all duration-200`}
                       onClick={toggleMenu}
                     >
                       {item.label}
