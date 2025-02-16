@@ -48,9 +48,9 @@ export default function Certification() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen  sm:pt-20 bg-white"
+      className="min-h-screen  bg-white"
     >
-      <div className="relative h-[400px] sm:h-[400px] md:h-[500px]">
+      <div className="relative h-[400px] sm:h-[500px] md:h-[700px]">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -88,7 +88,7 @@ export default function Certification() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-24">
         <div className="p-4 sm:p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
             {data.map((item, index) => (
               <motion.div
                 key={item.id}
