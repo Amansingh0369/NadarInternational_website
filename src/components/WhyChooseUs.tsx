@@ -1,4 +1,6 @@
 import { Leaf, Sparkles, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 export default function WhyChooseUs() {
   const features = [
     {
@@ -20,31 +22,44 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-16 w-full bg-gradient-to-br from-blue-800/80 to-blue-950">
-      <div className="text-center mb-12">
+      <motion.div 
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="text-center mb-12"
+      >
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Choose Us</h1>
-        <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
-      </div>
+        <motion.div 
+          initial={{ width: 0 }}
+          animate={{ width: "6rem" }}
+          transition={{ duration: 0.8 }}
+          className="h-1 bg-orange-500 mx-auto rounded-full"
+        />
+      </motion.div>
+
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-xl text-white transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:bg-white/10 border border-white/10"
+            <motion.div
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 200}
+              whileHover={{ scale: 1.05 }}
+              className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-xl text-white"
             >
-              <div 
-                className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group shadow-lg shadow-orange-500/20"
+              <motion.div 
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+                className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6"
               >
-                <span className="text-white transform transition-transform duration-500 ease-in-out group-hover:scale-125 group-hover:rotate-12">
-                  {feature.icon}
-                </span>
-              </div>
+                {feature.icon}
+              </motion.div>
               <h3 className="text-2xl font-bold mb-3 text-white hover:text-orange-500 transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-white/70 leading-relaxed max-w-md mx-auto opacity-90 hover:opacity-100 transition-opacity duration-300">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

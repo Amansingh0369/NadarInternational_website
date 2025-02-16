@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 
 export default function FeaturedProducts() {
   const products = {
@@ -21,20 +22,36 @@ export default function FeaturedProducts() {
   return (
     <div className="min-h-screen pb-16 pt-10 bg-neutral-200">
       <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col h-full">
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-950 text-center mb-12">Who We Are<span className="font-bold text-orange-500"> ?</span></h1>
+        <motion.h1 
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-6xl font-bold text-blue-950 text-center mb-12"
+        >
+          Who We Are<span className="font-bold text-orange-500"> ?</span>
+        </motion.h1>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
           {/* Company Description - Takes full width on mobile, half width on desktop */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:col-span-2">
+          <motion.div 
+            data-aos="fade-up"
+            className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:col-span-2"
+          >
             <h2 className="text-3xl uppercase font-bold text-center mb-4 text-gray-800">Nadar International</h2>
             <p className="text-gray-700 leading-relaxed text-center">
             Welcome to <span className="font-bold text-center items-center text-orange-500">Nadar International</span>, a trusted name in the export of premium-quality food products and spices. With a deep-rooted commitment to excellence, we source, process, and deliver the freshest and most authentic flavors to international markets.            </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
           {/* Product Categories */}
-          {Object.entries(products).map(([key, product]) => (
-            <div key={key} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          {Object.entries(products).map(([key, product], index) => (
+            <motion.div
+              key={key}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              whileHover={{ scale: 1.03 }}
+              className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden"
+            >
               <div className="h-48 overflow-hidden">
                 <img 
                   src={product.image}
@@ -46,7 +63,7 @@ export default function FeaturedProducts() {
                 <h3 className="text-xl font-bold mb-2 text-gray-800">{product.name}</h3>
                 <p className="text-gray-600">{product.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
