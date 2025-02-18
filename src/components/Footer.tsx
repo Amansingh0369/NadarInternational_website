@@ -37,7 +37,7 @@ export default function Footer() {
   const contactInfo = [
     { Icon: Phone, text: '+91 8437362026', href: 'tel:+918437362026' },
     { Icon: Mail, text: 'hello@nadarinternational.com', href: 'mailto:hello@nadarinternational.com' },
-    { Icon: MapPin, text: 'Tamil Nadu, India', href: null }
+    { Icon: MapPin, text: 'Ferozepur, Punjab, India', href: null }
   ];
 
   return (

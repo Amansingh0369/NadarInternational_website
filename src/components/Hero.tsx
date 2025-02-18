@@ -86,7 +86,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/40 sm:from-black/80 sm:to-black/40"
+          className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20 sm:from-black/80 sm:to-black/40"
           style={{ opacity }}
         >
           <div className="container mx-auto px-4 h-full flex items-center">
@@ -98,7 +98,7 @@ export default function Hero() {
                 className="overflow-hidden"
               >
                 <motion.h2 
-                  className={`text-orange-500 text-lg sm:text-xl md:text-2xl mb-4 ${ubuntu.className} text-center sm:text-left`}
+                  className={`text-orange-500 text-3xl font-semibold sm:text-5xl md:text-5xl mb-4 ${ubuntu.className} text-center sm:text-left`}
                   whileHover={{ scale: isMobile ? 1 : 1.05 }}
                   data-aos="fade-right"
                   data-aos-offset="100"

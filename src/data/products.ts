@@ -37,7 +37,7 @@ export const fruitsList = [
     name: 'Guava',
     title: "Sweet. Tart. Nutritious.",
     description: "Nature's candy. Enjoy the vibrant flavor and nutritional richness of our fresh guavas.",
-    image: guava.src
+    image: "https://shorturl.at/gkp0U"
   },
   {
     name: 'Pomegranate',
