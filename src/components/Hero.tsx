@@ -86,7 +86,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20 sm:from-black/80 sm:to-black/40"
+          className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/10 sm:from-black/40 sm:to-black/40"
           style={{ opacity }}
         >
           <div className="container mx-auto px-4 h-full flex items-center">
