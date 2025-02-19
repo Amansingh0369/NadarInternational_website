@@ -68,7 +68,7 @@ export default function Footer() {
                   whileHover={{ x: isMobile ? 5 : 10, color: '#FF6B00' }}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0, delay: index * 0.1 }}
                   className="flex items-center justify-center md:justify-start transition-all duration-300 space-x-4"
                 >
                   <item.Icon className="w-5 h-5 text-[#FF6B00]" />
@@ -97,7 +97,7 @@ export default function Footer() {
                   href="#"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0, delay: index * 0.1 }}
                   whileHover={{ x: isMobile ? 5 : 10, color: '#FF6B00' }}
                   className="block text-sm sm:text-base hover:text-[#FF6B00] transition-all duration-300"
                 >
