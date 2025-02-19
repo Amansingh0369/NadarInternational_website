@@ -37,7 +37,7 @@ export default function Footer() {
   const contactInfo = [
     { Icon: Phone, text: '+91 8437362026', href: 'tel:+918437362026' },
     { Icon: Mail, text: 'hello@nadarinternational.com', href: 'mailto:hello@nadarinternational.com' },
-    { Icon: MapPin, text: 'Ferozepur, Punjab, India', href: null }
+    { Icon: MapPin, text: 'Ferozepur, Punjab, India', href: 'https://maps.app.goo.gl/mNTPtZjoqWhkPoAY8' }
   ];
 
   return (
@@ -91,20 +91,27 @@ export default function Footer() {
               Quick Links
             </motion.h3>
             <div className="space-y-3 sm:space-y-4">
-              {['Home', 'About Us', 'Products', 'Certification', 'Contact'].map((link, index) => (
-                <motion.a
-                  key={link}
-                  href="#"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0, delay: index * 0.1 }}
-                  whileHover={{ x: isMobile ? 5 : 10, color: '#FF6B00' }}
-                  className="block text-sm sm:text-base hover:text-[#FF6B00] transition-all duration-300"
-                >
-                  {link}
-                </motion.a>
-              ))}
-            </div>
+                {[
+                  { name: 'Home', href: '/' },
+                  { name: 'About Us', href: '/about' },
+                  { name: 'Fruits', href: '/fruits' },
+                  { name: 'Spices ', href: '/spices' },
+                  { name: 'Vegetables', href: '/Vegetables' },
+                  { name: "certifications", href: "/certification" },
+                ].map((link, index) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.href}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0, delay: index * 0.1 }}
+                    whileHover={{ x: isMobile ? 5 : 10, color: '#FF6B00' }}
+                    className="block text-sm sm:text-base hover:text-[#FF6B00] transition-all duration-300"
+                  >
+                    {link.name}
+                  </motion.a>
+                ))}
+              </div>
           </motion.div>
 
           {/* Logo and Social Links Section */}
