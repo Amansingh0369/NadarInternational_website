@@ -1,14 +1,13 @@
 'use client';
 
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
 import logo from "../../public/Nadar_Logo.svg";
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BsTwitter, BsTwitterX, BsWhatsapp } from 'react-icons/bs';
+import { BsTwitter, BsWhatsapp } from 'react-icons/bs';
 
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(false);
