@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { BsTwitter, BsTwitterX, BsWhatsapp } from 'react-icons/bs';
 
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(false);
@@ -28,10 +29,10 @@ export default function Footer() {
   }, [isMobile]);
 
   const socialLinks = [
-    { Icon: Facebook, label: 'Facebook', href: '#' },
-    { Icon: Twitter, label: 'Twitter', href: '#' },
-    { Icon: Instagram, label: 'Instagram', href: '#' },
-    { Icon: Linkedin, label: 'LinkedIn', href: '#' }
+    { Icon: BsWhatsapp, label: 'Facebook', href: 'https://api.whatsapp.com/send?phone=8437362026' },
+    { Icon: BsTwitter, label: 'Twitter', href: 'https://x.com/nadarexports' },
+    { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/nadarinternational?igsh=cHR1M2pkajZ5cTNn' },
+    { Icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/' }
   ];
 
   const contactInfo = [

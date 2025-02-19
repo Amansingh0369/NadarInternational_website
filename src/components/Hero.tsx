@@ -95,7 +95,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="overflow-hidden"
+                className=""
               >
                 <motion.h2 
                   className={`text-orange-500 text-3xl font-semibold sm:text-5xl md:text-5xl mb-4 ${ubuntu.className} text-center sm:text-left`}

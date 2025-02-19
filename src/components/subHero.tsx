@@ -106,7 +106,7 @@ export default function SubHero() {
           Nadar International
         </span>
         , we take pride in being a leading exporter of high-quality spices,
-        pulses, grains, dried fruits, and other food products. With years of
+        Vegetables, fruits, and other food products. With years of
         industry expertise, we have established ourselves as a reliable partner
         for businesses worldwide, ensuring the finest ingredients reach your
         doorstep.
